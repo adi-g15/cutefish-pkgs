@@ -58,9 +58,7 @@ publish() {
 	rename '.tar.gz' '' *.tar.gz
 
 	# Commit
-	git add --all --verbose
-	echo "Adding manually"
-	git add "${ARCH}" --verbose
+	git add . --verbose
 	git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 	git config user.name "${GITHUB_ACTOR}"
 
